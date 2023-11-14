@@ -807,12 +807,18 @@ function showScoreDialog() {
 
   const formattedTime = formatTime(elapsedSeconds);
 
+  // Show an alert dialog with the score and time
   alert(`Selamat Anda Menang!\nSkor: ${score}\nWaktu: ${formattedTime}`);
+
   // Optionally, you can store the score in history or perform other actions
-  showScoreHistory(score, elapsedSeconds);
-  // Reload the page after clicking "OK" in the alert
+
+  // Reset the game state or perform other actions as needed
   resetGame();
+
+  // Additional logic after the alert is closed (since alert() is blocking)
+  console.log("Alert closed, game reset.");
 }
+
 
 // Format time (if needed)
 function formatTime(seconds) {
